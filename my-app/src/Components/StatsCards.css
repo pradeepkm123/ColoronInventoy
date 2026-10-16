@@ -1,0 +1,213 @@
+/* PhonePe & Paytm Style Animated Stats Cards */
+
+.stats-cards-container {
+  margin-bottom: 30px;
+}
+
+.stats-cards-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.stats-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .stats-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Stable Card Layout */
+.stats-card {
+  position: relative;
+  border-radius: 16px;
+  padding: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.3s ease;
+  user-select: none;
+}
+
+/* Fixed card background gradients */
+.stats-card.card-1 {
+  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+}
+
+.stats-card.card-2 {
+  background: linear-gradient(135deg, #2C3E50 0%, #3498DB 100%);
+}
+
+.stats-card.card-3 {
+  background: linear-gradient(135deg, #16A085 0%, #2ECC71 100%);
+}
+
+.stats-card.card-4 {
+  background: linear-gradient(135deg, #8E44AD 0%, #3F51B5 100%);
+}
+
+/* Subtle glassmorphism shine overlay */
+.stats-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 60%);
+  pointer-events: none;
+  transition: transform 0.5s ease;
+}
+
+.stats-card:hover::before {
+  transform: translate(15%, 15%);
+}
+
+/* Card Hover & Tap Elevation */
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stats-card:active {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Stable White Icon Badge */
+.icon-badge {
+  margin-right: 12px;
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  perspective: 400px; /* 3D Perspective for 3D flip effects */
+}
+
+/* -------------------------------------------------------------
+   EXACT PER-ICON ANIMATIONS WITH 2.5s-3s PAUSE LOOPS
+   The white card/badge/text remain stable; ONLY the icon moves.
+------------------------------------------------------------- */
+
+/* Card 1: 🟧 Total Products (Layers) -> 3D Flip (rotateY: 0° -> 180° -> 360°) */
+@keyframes icon3DFlip {
+  0% { transform: rotateY(0deg); }
+  15% { transform: rotateY(180deg); }
+  30% { transform: rotateY(360deg); }
+  100% { transform: rotateY(360deg); } /* Pause for ~2.8s */
+}
+
+.card-1 .animated-icon {
+  animation: icon3DFlip 4.0s ease-in-out infinite;
+  animation-delay: 0ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF6B35;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Card 2: 🟦 Total Dispatch Value (₹) -> Tilt + Small Bounce/Scale (rotate: -12° -> 12° -> -5° -> 0°, scale: 1 -> 1.12 -> 1) */
+@keyframes iconTiltBounce {
+  0% { transform: rotate(0deg) scale(1); }
+  7.5% { transform: rotate(-12deg) scale(1.12); }
+  15% { transform: rotate(12deg) scale(1.08); }
+  20% { transform: rotate(-5deg) scale(1.02); }
+  25% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(0deg) scale(1); } /* Pause for ~3.0s */
+}
+
+.card-2 .animated-icon {
+  animation: iconTiltBounce 4.0s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+  animation-delay: 300ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2C3E50;
+  will-change: transform;
+}
+
+/* Card 3: 🟩 Today's Inward (↗) -> Rise + Rotate (translateY: 4px -> -5px -> 0px, rotate: -8° -> 8° -> 0°) */
+@keyframes iconRiseRotate {
+  0% { transform: translateY(4px) rotate(-8deg); }
+  10% { transform: translateY(-5px) rotate(8deg); }
+  20% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(0px) rotate(0deg); } /* Pause for ~3.2s */
+}
+
+.card-3 .animated-icon {
+  animation: iconRiseRotate 4.0s ease-in-out infinite;
+  animation-delay: 600ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #16A085;
+  will-change: transform;
+}
+
+/* Card 4: 🟪 Today's Outward (↘) -> Drop + Rotate (translateY: 0px -> 5px -> -3px -> 0px, rotate: 8° -> -8° -> 0°) */
+@keyframes iconDropRotate {
+  0% { transform: translateY(0px) rotate(0deg); }
+  7.5% { transform: translateY(5px) rotate(8deg); }
+  15% { transform: translateY(-3px) rotate(-8deg); }
+  22.5% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(0px) rotate(0deg); } /* Pause for ~3.1s */
+}
+
+.card-4 .animated-icon {
+  animation: iconDropRotate 4.0s ease-in-out infinite;
+  animation-delay: 900ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8E44AD;
+  will-change: transform;
+}
+
+/* Typography styles */
+.card-header-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.95;
+  letter-spacing: 0.2px;
+}
+
+.card-value {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.card-desc {
+  font-size: 12px;
+  opacity: 0.85;
+  font-weight: 500;
+}
