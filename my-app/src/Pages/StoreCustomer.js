@@ -12,7 +12,7 @@ import {
 import axios from 'axios';
 import { useUser } from './UserContext';
 
-const API_BASE = 'http://localhost:5002';
+const API_BASE = 'https://coloroninventoy.onrender.com';
 
 const StoreCustomer = () => {
   const { user } = useUser();

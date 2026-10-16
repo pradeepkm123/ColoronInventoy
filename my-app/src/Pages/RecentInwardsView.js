@@ -21,7 +21,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import HomeIcon from '@mui/icons-material/Home';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-const API_URL = 'http://localhost:5002/api/inventory';
+const API_URL = 'https://coloroninventoy.onrender.com/api/inventory';
 
 export default function RecentInwardsView({ onNavigateHome }) {
   const [inwardData, setInwardData] = useState([]);
@@ -148,7 +148,7 @@ export default function RecentInwardsView({ onNavigateHome }) {
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                           {row.productImage ? (
                             <img 
-                              src={`http://localhost:5002/uploads/${row.productImage}`} 
+                              src={`https://coloroninventoy.onrender.com/uploads/${row.productImage}`} 
                               alt={row.modelNo}
                               style={{ width: 40, height: 40, borderRadius: 4, objectFit: 'cover', border: '1px solid #eee' }} 
                             />

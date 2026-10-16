@@ -66,7 +66,7 @@
 
 //   const fetchInvoices = async () => {
 //     try {
-//       const response = await axios.get('http://localhost:5002/api/invoices');
+//       const response = await axios.get('https://coloroninventoy.onrender.com/api/invoices');
 //       setInvoices(response.data);
 //     } catch (error) {
 //       console.error('Error fetching invoices:', error);
@@ -76,7 +76,7 @@
 
 //   const fetchModels = async () => {
 //     try {
-//       const response = await axios.get('http://localhost:5002/api/inventory');
+//       const response = await axios.get('https://coloroninventoy.onrender.com/api/inventory');
 //       const data = Array.isArray(response.data) ? response.data : response.data.models || [];
 //       setModels(data);
 //     } catch (error) {
@@ -87,7 +87,7 @@
 
 //   const fetchSalePersons = async () => {
 //     try {
-//       const response = await axios.get('http://localhost:5002/salesPersons');
+//       const response = await axios.get('https://coloroninventoy.onrender.com/salesPersons');
 //       setSalePersons(response.data);
 //     } catch (error) {
 //       console.error('Error fetching sale persons:', error);
@@ -104,11 +104,11 @@
 //     try {
 //       if (selected.length > 0) {
 //         await Promise.all(
-//           selected.map((id) => axios.delete(`http://localhost:5002/api/invoices/${id}`))
+//           selected.map((id) => axios.delete(`https://coloroninventoy.onrender.com/api/invoices/${id}`))
 //         );
 //         enqueueSnackbar(`${selected.length} invoices deleted successfully`, { variant: 'success' });
 //       } else if (selectedInvoice) {
-//         await axios.delete(`http://localhost:5002/api/invoices/${selectedInvoice._id}`);
+//         await axios.delete(`https://coloroninventoy.onrender.com/api/invoices/${selectedInvoice._id}`);
 //         enqueueSnackbar('Invoice deleted successfully', { variant: 'success' });
 //       }
 //       setOpenDeleteDialog(false);
@@ -262,7 +262,7 @@
 //         phoneNumber: selectedInvoice?.customer?.phoneNo || '',
 //       };
 
-//       await axios.post('http://localhost:5002/api/dispatch', dispatchData);
+//       await axios.post('https://coloroninventoy.onrender.com/api/dispatch', dispatchData);
 //       enqueueSnackbar('Dispatch recorded successfully!', { variant: 'success' });
 //       handleCloseDispatchDialog();
 //     } catch (error) {
@@ -588,7 +588,7 @@ import DeleteSweepIcon from '@mui/icons-material/DeleteSweep';
 import axios from 'axios';
 import { useSnackbar } from 'notistack';
 
-const API = 'http://localhost:5002';
+const API = 'https://coloroninventoy.onrender.com';
 
 const Dispatch = () => {
   const { enqueueSnackbar } = useSnackbar();

@@ -42,11 +42,7 @@ const darkTheme = createTheme({
   },
 });
 
-const API =
-  typeof window !== 'undefined' &&
-  (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-    ? 'http://localhost:5002/api'
-    : (process.env.REACT_APP_API_URL || 'http://localhost:5002/api');
+const API = process.env.REACT_APP_API_URL || 'https://coloroninventoy.onrender.com/api';
 
 const DEFAULT_ROLES_LIST = [
   'Super Admin',
@@ -216,8 +212,8 @@ function Login() {
       });
       navigate('/');
     } catch (e) {
-      setServerError('Server unreachable. Is backend running on port 5002?');
-      toast.error('Server unreachable. Is backend running on port 5002?');
+      setServerError('Server unreachable. Please check if the backend API is online.');
+      toast.error('Server unreachable. Please check if the backend API is online.');
     } finally {
       setSubmitting(false);
     }

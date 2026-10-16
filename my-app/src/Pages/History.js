@@ -55,7 +55,7 @@ import {
 } from 'lucide-react';
 import Spinner from '../Components/Spinner';
 
-const API_BASE = 'http://localhost:5002/api';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
 
 function History() {
   const { user } = useUser();

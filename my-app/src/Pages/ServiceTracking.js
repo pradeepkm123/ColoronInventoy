@@ -33,7 +33,7 @@ import {
   X
 } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5002/api';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
 
 export default function ServiceTracking() {
   const [searchKey, setSearchKey] = useState('');

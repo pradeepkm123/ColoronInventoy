@@ -35,10 +35,10 @@ import {
 } from 'lucide-react';
 import axios from 'axios';
 
-const BRANDS_API = 'http://localhost:5002/api/brands';
-const CATEGORIES_API = 'http://localhost:5002/api/categories';
-const SUBCATEGORIES_API = 'http://localhost:5002/api/subcategories';
-const PRODUCTS_API = 'http://localhost:5002/api/products';
+const BRANDS_API = 'https://coloroninventoy.onrender.com/api/brands';
+const CATEGORIES_API = 'https://coloroninventoy.onrender.com/api/categories';
+const SUBCATEGORIES_API = 'https://coloroninventoy.onrender.com/api/subcategories';
+const PRODUCTS_API = 'https://coloroninventoy.onrender.com/api/products';
 
 const defaultFormState = {
   brand: '',
@@ -115,7 +115,7 @@ const AddProduct = ({
         return helper(img);
       }
       if (/^https?:\/\//i.test(img) || img.startsWith('/uploads/')) return img;
-      return `http://localhost:5002/uploads/${img}`;
+      return `https://coloroninventoy.onrender.com/uploads/${img}`;
     }
 
     return null;

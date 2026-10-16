@@ -22,7 +22,7 @@ import HomeIcon from '@mui/icons-material/Home';
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-const API_URL = 'http://localhost:5002/api/products';
+const API_URL = 'https://coloroninventoy.onrender.com/api/products';
 
 export default function LowStockView({ onNavigateHome }) {
   const [products, setProducts] = useState([]);
@@ -151,7 +151,7 @@ export default function LowStockView({ onNavigateHome }) {
                       <TableCell sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                         {row.productImage ? (
                           <img 
-                            src={`http://localhost:5002/${row.productImage.replace(/\\/g, '/')}`} 
+                            src={`https://coloroninventoy.onrender.com/${row.productImage.replace(/\\/g, '/')}`} 
                             alt={row.model}
                             style={{ width: 40, height: 40, borderRadius: 4, objectFit: 'cover', border: '1px solid #eee' }} 
                           />

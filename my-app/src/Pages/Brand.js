@@ -44,7 +44,7 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { useSnackbar } from 'notistack';
 
-const API_BASE = 'http://localhost:5002/api';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
 
 const Brand = () => {
   const { enqueueSnackbar } = useSnackbar();

@@ -46,7 +46,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
-const API = 'http://localhost:5002/api';
+const API = 'https://coloroninventoy.onrender.com/api';
 
 const CategoryManagement = ({ onCategoriesUpdated }) => {
   const [categories, setCategories] = useState([]);
@@ -350,7 +350,7 @@ const CategoryManagement = ({ onCategoriesUpdated }) => {
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
                       {cat.image ? (
                         <Avatar
-                          src={`http://localhost:5002/${cat.image}`}
+                          src={`https://coloroninventoy.onrender.com/${cat.image}`}
                           sx={{ width: 36, height: 36, borderRadius: 2, border: '1px solid #e2e8f0' }}
                         />
                       ) : (

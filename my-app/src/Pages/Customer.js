@@ -53,7 +53,7 @@ import {
 } from 'lucide-react';
 import { useSnackbar } from 'notistack';
 
-const API = 'http://localhost:5002';
+const API = 'https://coloroninventoy.onrender.com';
 
 const INDIAN_STATES = [
   'Andhra Pradesh',

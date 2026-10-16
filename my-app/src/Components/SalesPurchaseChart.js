@@ -46,8 +46,8 @@ const SalesPurchaseChart = () => {
     const fetchData = async () => {
       try {
         const [inwardRes, outwardRes] = await Promise.all([
-          fetch('http://localhost:5002/api/inventory'),
-          fetch('http://localhost:5002/api/dispatch'),
+          fetch('https://coloroninventoy.onrender.com/api/inventory'),
+          fetch('https://coloroninventoy.onrender.com/api/dispatch'),
         ]);
         const inwardData = await inwardRes.json();
         const outwardData = await outwardRes.json();

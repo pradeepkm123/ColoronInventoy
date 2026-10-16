@@ -52,7 +52,7 @@ import {
 import SaveIcon from '@mui/icons-material/Save';
 import MoveToInboxIcon from '@mui/icons-material/MoveToInbox';
 
-const API_BASE = 'http://localhost:5002/api';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
 
 const AlertDialog = ({ open, onClose, title, message, actions }) => {
   return (

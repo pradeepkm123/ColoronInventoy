@@ -22,8 +22,8 @@ import HomeIcon from '@mui/icons-material/Home';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
 
-const DISPATCH_API_URL = 'http://localhost:5002/api/dispatch';
-const PRODUCTS_API_URL = 'http://localhost:5002/api/products';
+const DISPATCH_API_URL = 'https://coloroninventoy.onrender.com/api/dispatch';
+const PRODUCTS_API_URL = 'https://coloroninventoy.onrender.com/api/products';
 
 export default function RecentOutwardView({ onNavigateHome }) {
   const [outwardData, setOutwardData] = useState([]);
@@ -172,7 +172,7 @@ export default function RecentOutwardView({ onNavigateHome }) {
                             <Box sx={{ width: 40, height: 40, borderRadius: 1, backgroundColor: '#f3f4f6', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #eee', overflow: 'hidden', flexShrink: 0 }}>
                               {productImage ? (
                                 <img 
-                                  src={`http://localhost:5002/uploads/${productImage}`} 
+                                  src={`https://coloroninventoy.onrender.com/uploads/${productImage}`} 
                                   alt={row.modelNo}
                                   style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
                                   onError={(e) => {

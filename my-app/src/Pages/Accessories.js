@@ -42,7 +42,7 @@ import {
 } from 'lucide-react';
 import { useSnackbar } from 'notistack';
 
-const API_BASE = 'http://localhost:5002/api';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
 
 const Accessories = () => {
   const { enqueueSnackbar } = useSnackbar();

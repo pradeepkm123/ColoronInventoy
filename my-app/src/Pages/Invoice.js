@@ -68,11 +68,7 @@ import {
 import axios from 'axios';
 import * as XLSX from 'xlsx';
 
-const API_BASE =
-  typeof window !== 'undefined' &&
-  (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-    ? 'http://localhost:5002/api'
-    : (process.env.REACT_APP_API_URL || 'http://localhost:5002/api');
+const API_BASE = process.env.REACT_APP_API_URL || 'https://coloroninventoy.onrender.com/api';
 
 // Indian currency formatter
 const formatINR = (val) => {

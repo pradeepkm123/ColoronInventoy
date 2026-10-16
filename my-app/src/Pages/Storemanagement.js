@@ -30,8 +30,8 @@ import { useSnackbar } from 'notistack';
 import axios from 'axios';
 // import Box from '@mui/material/Box';
 
-const FILE_HOST = 'http://localhost:5002';
-const API_BASE = 'http://localhost:5002/api';
+const FILE_HOST = 'https://coloroninventoy.onrender.com';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
 
 // Helper functions
 const makeEmptyLine = () => ({

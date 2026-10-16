@@ -65,11 +65,7 @@ const ALL_ROLES = [
   'Customer',
 ];
 
-const API_BASE_PRIMARY =
-  typeof window !== 'undefined' &&
-  (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-    ? 'http://localhost:5002/api'
-    : (process.env.REACT_APP_API_URL || 'http://localhost:5002/api');
+const API_BASE_PRIMARY = process.env.REACT_APP_API_URL || 'https://coloroninventoy.onrender.com/api';
 
 // Permission valid duration: exactly 2 minutes (120,000 ms)
 const PERMISSION_DURATION_MS = 2 * 60 * 1000;
@@ -519,10 +515,9 @@ export default function EditAccountModal({ open, onClose, user, onSaved }) {
     };
 
     const targets = [
-      `http://localhost:5002/api/users/${userId}`,
-      `http://127.0.0.1:5002/api/users/${userId}`,
-      `/api/users/${userId}`,
       `${API_BASE_PRIMARY}/users/${userId}`,
+      `https://coloroninventoy.onrender.com/api/users/${userId}`,
+      `/api/users/${userId}`,
     ];
 
     let dbUpdatedUser = null;

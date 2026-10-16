@@ -42,7 +42,7 @@ import {
 } from 'lucide-react';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5002/api/products';
+const API_URL = 'https://coloroninventoy.onrender.com/api/products';
 
 const INITIAL_ADJUSTMENTS = [
   {

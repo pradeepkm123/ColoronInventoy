@@ -36,7 +36,7 @@ import {
 } from 'lucide-react';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5002/api/products';
+const API_URL = 'https://coloroninventoy.onrender.com/api/products';
 
 // SVG QR Code Renderer
 const QrCodeSvg = ({ text = 'LOOKMAN-PROD-001', size = 110 }) => {

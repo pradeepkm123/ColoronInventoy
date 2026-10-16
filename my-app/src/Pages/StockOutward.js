@@ -25,8 +25,8 @@
 // // // import axios from 'axios';
 // // // import { useSnackbar } from 'notistack';
 
-// // // const API_BASE = 'http://localhost:5002/api';
-// // // const FILE_HOST = 'http://localhost:5002';
+// // // const API_BASE = 'https://coloroninventoy.onrender.com/api';
+// // // const FILE_HOST = 'https://coloroninventoy.onrender.com';
 
 // // // // Helper: Image URL
 // // // const getImageUrl = (img) => {
@@ -849,8 +849,8 @@
 // import axios from 'axios';
 // import { useSnackbar } from 'notistack';
 
-// const API_BASE = 'http://localhost:5002/api';
-// const FILE_HOST = 'http://localhost:5002';
+// const API_BASE = 'https://coloroninventoy.onrender.com/api';
+// const FILE_HOST = 'https://coloroninventoy.onrender.com';
 
 // // Helper: Image URL
 // const getImageUrl = (img) => {
@@ -1830,8 +1830,8 @@ import { Add as AddIcon, Delete as DeleteIcon } from '@mui/icons-material';
 import axios from 'axios';
 import { useSnackbar } from 'notistack';
 
-const API_BASE = 'http://localhost:5002/api';
-const FILE_HOST = 'http://localhost:5002';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
+const FILE_HOST = 'https://coloroninventoy.onrender.com';
 
 // Helper: Image URL
 const getImageUrl = (img) => {

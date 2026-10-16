@@ -71,7 +71,7 @@
 //   useEffect(() => {
 //     const fetchCategories = async () => {
 //       try {
-//         const response = await fetch('http://localhost:5002/api/categories');
+//         const response = await fetch('https://coloroninventoy.onrender.com/api/categories');
 //         if (!response.ok) {
 //           throw new Error('Network response was not ok');
 //         }
@@ -84,7 +84,7 @@
 
 //     const fetchBrands = async () => {
 //       try {
-//         const response = await fetch('http://localhost:5002/api/brands');
+//         const response = await fetch('https://coloroninventoy.onrender.com/api/brands');
 //         if (!response.ok) {
 //           throw new Error('Network response was not ok');
 //         }
@@ -101,7 +101,7 @@
 
 //   useEffect(() => {
 //     const fetchData = async () => {
-//       const endpoint = activeTab === 'inward' ? 'http://localhost:5002/api/inventory' : 'http://localhost:5002/api/dispatch';
+//       const endpoint = activeTab === 'inward' ? 'https://coloroninventoy.onrender.com/api/inventory' : 'https://coloroninventoy.onrender.com/api/dispatch';
 //       try {
 //         const response = await fetch(endpoint);
 //         if (!response.ok) {
@@ -926,7 +926,7 @@ const Reports = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('http://localhost:5002/api/categories');
+        const response = await fetch('https://coloroninventoy.onrender.com/api/categories');
         if (!response.ok) throw new Error('Failed categories fetch');
         const data = await response.json();
         setCategories(Array.isArray(data) ? data : []);
@@ -938,7 +938,7 @@ const Reports = () => {
 
     const fetchBrands = async () => {
       try {
-        const response = await fetch('http://localhost:5002/api/brands');
+        const response = await fetch('https://coloroninventoy.onrender.com/api/brands');
         if (!response.ok) throw new Error('Failed brands fetch');
         const data = await response.json();
         setBrands(Array.isArray(data) ? data : []);
@@ -960,7 +960,7 @@ const Reports = () => {
     const fetchInward = async () => {
       setLoadingInward(true);
       try {
-        const response = await fetch('http://localhost:5002/api/inventory');
+        const response = await fetch('https://coloroninventoy.onrender.com/api/inventory');
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         if (isMounted) setInwardTransactions(Array.isArray(data) ? data : []);
@@ -975,7 +975,7 @@ const Reports = () => {
     const fetchOutward = async () => {
       setLoadingOutward(true);
       try {
-        const response = await fetch('http://localhost:5002/api/dispatch');
+        const response = await fetch('https://coloroninventoy.onrender.com/api/dispatch');
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         if (isMounted) setOutwardTransactions(Array.isArray(data) ? data : []);

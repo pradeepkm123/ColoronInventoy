@@ -90,7 +90,7 @@ const InvoiceDetails = () => {
   useEffect(() => {
     const fetchWarehouseDetails = async () => {
       try {
-        const res = await axios.get('http://localhost:5002/api/warehouses');
+        const res = await axios.get('https://coloroninventoy.onrender.com/api/warehouses');
         if (Array.isArray(res.data) && res.data.length > 0) {
           const w = res.data[0];
           setWarehouseDetails({
@@ -111,7 +111,7 @@ const InvoiceDetails = () => {
 
     const fetchDispatch = async () => {
       try {
-        const res = await axios.get(`http://localhost:5002/api/dispatch/${id}`);
+        const res = await axios.get(`https://coloroninventoy.onrender.com/api/dispatch/${id}`);
         setDispatch(res.data);
       } catch (err) {
         console.error(err);

@@ -3,7 +3,7 @@
 // import { Calendar, Edit, Trash2, Upload, Plus, X } from 'lucide-react';
 // import { useUser } from './UserContext';
 
-// const API_BASE = 'http://localhost:5002/api';
+// const API_BASE = 'https://coloroninventoy.onrender.com/api';
 
 // function useWindowWidth() {
 //   const [w, setW] = useState(() => (typeof window !== 'undefined' ? window.innerWidth : 1200));
@@ -777,7 +777,7 @@ import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Calendar, Edit, Trash2, Upload, Plus, X } from 'lucide-react';
 import { useUser } from './UserContext';
 
-const API_BASE = 'http://localhost:5002/api';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
 
 function useWindowWidth() {
   const [w, setW] = useState(() =>

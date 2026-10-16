@@ -58,7 +58,7 @@ import {
   Check
 } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5002/api';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
 
 // Avatar & Color Helpers
 const getInitials = (name) => {

@@ -7,7 +7,7 @@ const RecentTransactions = ({ onViewAll }) => {
   useEffect(() => {
     const fetchInward = async () => {
       try {
-        const res = await fetch('http://localhost:5002/api/inventory');
+        const res = await fetch('https://coloroninventoy.onrender.com/api/inventory');
         const data = await res.json();
         const sorted = data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         setInwardData(sorted.slice(0, 5)); // Latest 5

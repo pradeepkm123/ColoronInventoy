@@ -40,9 +40,9 @@ import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import { useUser } from './UserContext';
 
-const DISPATCH_API_URL = 'http://localhost:5002/api/dispatch';
-const PRODUCTS_API_URL = 'http://localhost:5002/api/products';
-const STORES_API_URL = 'http://localhost:5002/api/locations';
+const DISPATCH_API_URL = 'https://coloroninventoy.onrender.com/api/dispatch';
+const PRODUCTS_API_URL = 'https://coloroninventoy.onrender.com/api/products';
+const STORES_API_URL = 'https://coloroninventoy.onrender.com/api/locations';
 
 export default function TopSellingProductsView({ onNavigateHome }) {
   const { user } = useUser();
@@ -673,7 +673,7 @@ export default function TopSellingProductsView({ onNavigateHome }) {
                   .map((row, index) => {
                     const globalRank = page * rowsPerPage + index + 1;
                     const imageUrl = row.productImage
-                      ? `http://localhost:5002/uploads/${row.productImage}`
+                      ? `https://coloroninventoy.onrender.com/uploads/${row.productImage}`
                       : '/placeholder.png';
 
                     return (

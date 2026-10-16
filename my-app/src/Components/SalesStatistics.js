@@ -54,8 +54,8 @@ const SalesStatistics = () => {
     const fetchDatabaseRecords = async () => {
       try {
         const [dispatchRes, inventoryRes] = await Promise.all([
-          fetch('http://localhost:5002/api/dispatch'),
-          fetch('http://localhost:5002/api/inventory')
+          fetch('https://coloroninventoy.onrender.com/api/dispatch'),
+          fetch('https://coloroninventoy.onrender.com/api/inventory')
         ]);
 
         const dispatches = await dispatchRes.json();

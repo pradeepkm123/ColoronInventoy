@@ -17,8 +17,8 @@ const TopSellingProducts = ({ onViewAll }) => {
     const fetchData = async () => {
       try {
         const [dispatchRes, productsRes] = await Promise.all([
-          fetch('http://localhost:5002/api/dispatch'),
-          fetch('http://localhost:5002/api/products')
+          fetch('https://coloroninventoy.onrender.com/api/dispatch'),
+          fetch('https://coloroninventoy.onrender.com/api/products')
         ]);
 
         const dispatchData = await dispatchRes.json();

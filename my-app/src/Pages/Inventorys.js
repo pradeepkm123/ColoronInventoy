@@ -53,7 +53,7 @@ import {
 } from 'lucide-react';
 import { useSnackbar } from 'notistack';
 
-const API = 'http://localhost:5002';
+const API = 'https://coloroninventoy.onrender.com';
 
 // Helper to parse comma or whitespace-separated codes
 const parseCodes = (codesStr) => {

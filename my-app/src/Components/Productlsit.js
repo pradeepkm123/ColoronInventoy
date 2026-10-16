@@ -136,7 +136,7 @@ const StatCard = ({ icon: Icon, title, iconBg, count, onClick, isSelected, stats
       <div style={styles.iconContainer}>
         {image ? (
           <img
-            src={`http://localhost:5002/${image.replace(/\\/g, '/')}`}
+            src={`https://coloroninventoy.onrender.com/${image.replace(/\\/g, '/')}`}
             alt={title}
             style={{ width: '28px', height: '28px', objectFit: 'contain' }}
             onError={(e) => { e.currentTarget.style.display = 'none'; }}
@@ -296,7 +296,7 @@ export default function Productlist({ setSelectedCategory, products = [], catego
 
   const fetchCategoriesFromApi = useCallback(async () => {
     try {
-      const res = await axios.get('http://localhost:5002/api/categories');
+      const res = await axios.get('https://coloroninventoy.onrender.com/api/categories');
       if (Array.isArray(res.data)) {
         setDbCategories(res.data);
       }

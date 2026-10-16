@@ -1055,7 +1055,7 @@ export default function MiniDrawer() {
     } catch { }
 
     const token = localStorage.getItem('token') || localStorage.getItem('authToken');
-    const API_BASE_PRIMARY = (process.env.REACT_APP_API_URL || 'http://localhost:5002/api').replace(/\/$/, '');
+    const API_BASE_PRIMARY = (process.env.REACT_APP_API_URL || 'https://coloroninventoy.onrender.com/api').replace(/\/$/, '');
     fetch(`${API_BASE_PRIMARY}/users/${targetUserId}/grant-edit-permission`, {
       method: 'POST',
       headers: {

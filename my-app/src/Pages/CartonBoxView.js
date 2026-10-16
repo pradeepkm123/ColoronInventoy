@@ -53,7 +53,7 @@ import html2canvas from 'html2canvas';
 import coloronLogo from '../assets/img/coloron.png';
 import { COLORON_LOGO_DATA_URL } from '../assets/img/coloronBase64';
 
-const API_BASE = 'http://localhost:5002/api';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
 const CARTON_API = `${API_BASE}/carton-box`;
 const INVENTORY_API = `${API_BASE}/inventory`;
 

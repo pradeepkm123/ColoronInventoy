@@ -10,8 +10,8 @@ const RecentSales = ({ onViewAll }) => {
     const fetchData = async () => {
       try {
         const [dispatchRes, productRes] = await Promise.all([
-          fetch('http://localhost:5002/api/dispatch'),
-          fetch('http://localhost:5002/api/products')
+          fetch('https://coloroninventoy.onrender.com/api/dispatch'),
+          fetch('https://coloroninventoy.onrender.com/api/products')
         ]);
 
         const dispatchData = await dispatchRes.json();
@@ -91,7 +91,7 @@ const RecentSales = ({ onViewAll }) => {
                 }}>
                   {productImage ? (
                     <img
-                      src={`http://localhost:5002/uploads/${productImage}`}
+                      src={`https://coloroninventoy.onrender.com/uploads/${productImage}`}
                       alt={sale.modelNo}
                       style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       onError={(e) => {

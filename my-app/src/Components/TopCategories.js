@@ -42,9 +42,9 @@ const TopCategories = () => {
     const fetchData = async () => {
       try {
         const [dispatchRes, productsRes, categoriesRes] = await Promise.all([
-          fetch('http://localhost:5002/api/dispatch'),
-          fetch('http://localhost:5002/api/products'),
-          fetch('http://localhost:5002/api/categories')
+          fetch('https://coloroninventoy.onrender.com/api/dispatch'),
+          fetch('https://coloroninventoy.onrender.com/api/products'),
+          fetch('https://coloroninventoy.onrender.com/api/categories')
         ]);
 
         const dispatch = await dispatchRes.json();

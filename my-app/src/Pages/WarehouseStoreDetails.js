@@ -57,7 +57,7 @@ import { useSnackbar } from 'notistack';
 import { useUser } from './UserContext';
 import './InventoryDashboard.css';
 
-const API = 'http://localhost:5002/api';
+const API = 'https://coloroninventoy.onrender.com/api';
 
 const WarehouseStoreDetails = () => {
   const { user } = useUser();

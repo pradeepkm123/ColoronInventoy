@@ -8,7 +8,7 @@ const LowStockProducts = ({ onViewAll }) => {
   useEffect(() => {
     const fetchLowStock = async () => {
       try {
-        const res = await fetch('http://localhost:5002/api/products');
+        const res = await fetch('https://coloroninventoy.onrender.com/api/products');
         const data = await res.json();
 
         const filtered = data.filter(
@@ -73,7 +73,7 @@ const LowStockProducts = ({ onViewAll }) => {
                 }}>
                   {product.productImage ? (
                     <img
-                      src={`http://localhost:5002/uploads/${product.productImage}`}
+                      src={`https://coloroninventoy.onrender.com/uploads/${product.productImage}`}
                       alt={product.model || 'Product'}
                       style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       onError={(e) => {

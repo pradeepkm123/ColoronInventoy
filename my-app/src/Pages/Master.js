@@ -42,8 +42,8 @@ import axios from 'axios';
 import Productlist from '../Components/Productlsit';
 import NoProduct from '../assets/img/No-Product.png';
 
-const API_URL = 'http://localhost:5002/api';
-const FILE_HOST = 'http://localhost:5002';
+const API_URL = 'https://coloroninventoy.onrender.com/api';
+const FILE_HOST = 'https://coloroninventoy.onrender.com';
 
 // --- safer URL builder
 const getImageUrl = (img) => {

@@ -20,9 +20,9 @@ const OverallInformation = () => {
     const fetchCounts = async () => {
       try {
         const [salesRes, customersRes, brandsRes] = await Promise.all([
-          fetch('http://localhost:5002/api/salesPersons'),
-          fetch('http://localhost:5002/api/customers'),
-          fetch('http://localhost:5002/api/brands'),
+          fetch('https://coloroninventoy.onrender.com/api/salesPersons'),
+          fetch('https://coloroninventoy.onrender.com/api/customers'),
+          fetch('https://coloroninventoy.onrender.com/api/brands'),
         ]);
 
         const salesData = await salesRes.json();

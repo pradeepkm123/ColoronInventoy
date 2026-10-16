@@ -6,9 +6,10 @@ const OLD_URLS = [
   /https:\/\/stockhandle\.onrender\.com/g,
   /https:\/\/inventoryapi\.cctvshoppee\.com/g,
   /http:\/\/52\.66\.98\.128:5002/g,
-  /http:\/\/localhost:5000/g
+  /http:\/\/localhost:5000/g,
+  /http:\/\/localhost:5002/g
 ];
-const NEW_URL = 'http://localhost:5002';
+const NEW_URL = 'https://coloroninventoy.onrender.com';
 
 const srcDir = path.join(__dirname, 'my-app', 'src');
 

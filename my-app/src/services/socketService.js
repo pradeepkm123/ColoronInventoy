@@ -4,11 +4,7 @@ import { io } from 'socket.io-client';
 let socket = null;
 let isConnected = false;
 
-const SOCKET_URL =
-  typeof window !== 'undefined' &&
-    (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-    ? 'http://localhost:5002'
-    : (process.env.REACT_APP_API_URL || 'http://localhost:5002').replace(/\/api$/, '');
+const SOCKET_URL = (process.env.REACT_APP_API_URL || 'https://coloroninventoy.onrender.com/api').replace(/\/api$/, '');
 
 /**
  * Initialize socket connection for current logged in user

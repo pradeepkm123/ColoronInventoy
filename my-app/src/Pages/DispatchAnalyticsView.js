@@ -49,10 +49,10 @@ import {
   Cell,
 } from 'recharts';
 
-const DISPATCH_API_URL = 'http://localhost:5002/api/dispatch';
-const INVENTORY_VALUE_API_URL = 'http://localhost:5002/api/inventory/total-value';
-const PRODUCTS_API_URL = 'http://localhost:5002/api/products';
-const INVENTORY_API_URL = 'http://localhost:5002/api/inventory';
+const DISPATCH_API_URL = 'https://coloroninventoy.onrender.com/api/dispatch';
+const INVENTORY_VALUE_API_URL = 'https://coloroninventoy.onrender.com/api/inventory/total-value';
+const PRODUCTS_API_URL = 'https://coloroninventoy.onrender.com/api/products';
+const INVENTORY_API_URL = 'https://coloroninventoy.onrender.com/api/inventory';
 
 // Palette for Category graphic bars
 const BAR_COLORS = [
@@ -1419,7 +1419,7 @@ export default function DispatchAnalyticsView({ onNavigateHome, initialTab = 'st
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
                               {row.productImage ? (
                                 <img
-                                  src={`http://localhost:5002/${row.productImage.replace(/\\/g, '/')}`}
+                                  src={`https://coloroninventoy.onrender.com/${row.productImage.replace(/\\/g, '/')}`}
                                   alt={row.model}
                                   style={{ width: 36, height: 36, borderRadius: 6, objectFit: 'cover', border: '1px solid #eee' }}
                                   onError={(e) => { e.target.onerror = null; e.target.style.display = 'none'; }}

@@ -24,8 +24,8 @@
 // import { useSnackbar } from 'notistack';
 // import axios from 'axios';
 
-// const FILE_HOST = 'http://localhost:5002';
-// const API_BASE = 'http://localhost:5002/api';
+// const FILE_HOST = 'https://coloroninventoy.onrender.com';
+// const API_BASE = 'https://coloroninventoy.onrender.com/api';
 
 // const styles = {
 //   container: {
@@ -827,8 +827,8 @@ import { Cancel as CancelIcon, Save as SaveIcon, Add as AddIcon, Delete as Delet
 import { useSnackbar } from 'notistack';
 import axios from 'axios';
 
-const FILE_HOST = 'http://localhost:5002';
-const API_BASE = 'http://localhost:5002/api';
+const FILE_HOST = 'https://coloroninventoy.onrender.com';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
 
 const styles = {
   container: {

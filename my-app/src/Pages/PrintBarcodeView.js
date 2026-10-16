@@ -56,7 +56,7 @@ import JsBarcode from 'jsbarcode';
 import coloronLogo from '../assets/img/coloron.png';
 import { COLORON_LOGO_DATA_URL } from '../assets/img/coloronBase64';
 
-const API_BASE = 'http://localhost:5002/api';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
 const INVENTORY_API = `${API_BASE}/inventory`;
 const PRODUCTS_API = `${API_BASE}/products`;
 const BATCH_SIZE = 100; // Max 100 labels rendered per view/print job to prevent browser OOM crashes

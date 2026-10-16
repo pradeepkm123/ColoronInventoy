@@ -28,7 +28,7 @@
 
 // import axios from 'axios';
 
-// const API_BASE = 'http://localhost:5002/api';
+// const API_BASE = 'https://coloroninventoy.onrender.com/api';
 
 // const StoreHome = ({ onStoreSelect }) => {
 //     const { user } = useUser();
@@ -333,7 +333,7 @@ import {
 
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:5002/api';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
 
 const StoreHome = ({ onStoreSelect }) => {
   const { user } = useUser();

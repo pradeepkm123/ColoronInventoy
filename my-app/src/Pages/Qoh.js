@@ -33,7 +33,7 @@ const Qoh = () => {
 
   const fetchInventoryData = async () => {
     try {
-      const response = await axios.get('http://localhost:5002/api/inventory');
+      const response = await axios.get('https://coloroninventoy.onrender.com/api/inventory');
       setInventoryData(response.data);
     } catch (error) {
       console.error('Error fetching inventory data:', error);
@@ -42,7 +42,7 @@ const Qoh = () => {
 
   const fetchLocations = async () => {
     try {
-      const response = await axios.get('http://localhost:5002/api/locations');
+      const response = await axios.get('https://coloroninventoy.onrender.com/api/locations');
       setLocations(response.data);
     } catch (error) {
       console.error('Error fetching locations:', error);

@@ -45,7 +45,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
-const API_BASE = 'http://localhost:5002';
+const API_BASE = 'https://coloroninventoy.onrender.com';
 
 const SubCategoryManagement = () => {
   const [subCategories, setSubCategories] = useState([]);

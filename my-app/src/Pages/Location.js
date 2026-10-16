@@ -43,7 +43,7 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { useSnackbar } from 'notistack';
 
-const API = 'http://localhost:5002';
+const API = 'https://coloroninventoy.onrender.com';
 
 export default function Location() {
   const { enqueueSnackbar } = useSnackbar();

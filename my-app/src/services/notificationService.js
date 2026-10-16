@@ -67,7 +67,7 @@ export const formatNotificationTime = (dateInput) => {
   return `${dateStr} at ${timeStr}`;
 };
 
-const API_BASE = 'http://localhost:5002/api';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
 
 /**
  * Strict role and account matcher.

@@ -43,7 +43,7 @@ import {
   Layers
 } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5002/api';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
 const PO_API = `${API_BASE}/purchase-orders`;
 
 export default function PurchaseOrders() {

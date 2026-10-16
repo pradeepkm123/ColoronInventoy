@@ -24,7 +24,7 @@ import ViewInArIcon from '@mui/icons-material/ViewInAr';
 import SettingsInputAntennaIcon from '@mui/icons-material/SettingsInputAntenna';
 import InventoryIcon from '@mui/icons-material/Inventory';
 
-const API_BASE = 'http://localhost:5002/api';
+const API_BASE = 'https://coloroninventoy.onrender.com/api';
 
 export default function TotalProductsView({ onNavigateHome }) {
   const [products, setProducts] = useState([]);

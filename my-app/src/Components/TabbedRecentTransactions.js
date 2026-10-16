@@ -12,8 +12,8 @@ const TabbedRecentTransactions = ({ onViewAll }) => {
     const fetchTransactions = async () => {
       try {
         const [dispatchRes, customerRes] = await Promise.all([
-          fetch('http://localhost:5002/api/dispatch'),
-          fetch('http://localhost:5002/api/customers')
+          fetch('https://coloroninventoy.onrender.com/api/dispatch'),
+          fetch('https://coloroninventoy.onrender.com/api/customers')
         ]);
 
         const dispatchData = await dispatchRes.json();

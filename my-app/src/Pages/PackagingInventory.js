@@ -23,7 +23,7 @@
 // //     const fetchItems = async () => {
 // //       try {
 // //         setIsLoading(true);
-// //         const response = await fetch('http://localhost:5002/api/items');
+// //         const response = await fetch('https://coloroninventoy.onrender.com/api/items');
 // //         if (!response.ok) throw new Error('Failed to fetch items');
 // //         const data = await response.json();
 // //         setPackagingItems(data);
@@ -38,7 +38,7 @@
 
 // //   const handleAddItem = async (formData) => {
 // //     try {
-// //       const response = await fetch('http://localhost:5002/api/packaging', {
+// //       const response = await fetch('https://coloroninventoy.onrender.com/api/packaging', {
 // //         method: 'POST',
 // //         headers: {
 // //           'Content-Type': 'application/json',
@@ -60,7 +60,7 @@
 
 // //   const handleEditItem = async (id, updatedItem) => {
 // //     try {
-// //       const response = await fetch(`http://localhost:5002/api/packaging/${id}`, {
+// //       const response = await fetch(`https://coloroninventoy.onrender.com/api/packaging/${id}`, {
 // //         method: 'PUT',
 // //         headers: {
 // //           'Content-Type': 'application/json',
@@ -81,7 +81,7 @@
 
 // //   const handleDeleteItem = async (id) => {
 // //     try {
-// //       const response = await fetch(`http://localhost:5002/api/packaging/${id}`, {
+// //       const response = await fetch(`https://coloroninventoy.onrender.com/api/packaging/${id}`, {
 // //         method: 'DELETE',
 // //       });
 // //       if (!response.ok) throw new Error('Failed to delete item');
@@ -944,10 +944,10 @@
 
 //   // Hardcoded API URL
 //   const API_BASE_URL =
-//     process.env.REACT_APP_API_URL || 'http://localhost:5002/api';
+//     process.env.REACT_APP_API_URL || 'https://coloroninventoy.onrender.com/api';
 
 // // const API_BASE_URL =
-// //   process.env.REACT_APP_API_URL || 'http://localhost:5002/api';
+// //   process.env.REACT_APP_API_URL || 'https://coloroninventoy.onrender.com/api';
 
 
 //   // Get token from localStorage
@@ -1914,7 +1914,7 @@ import { Calendar, Edit, Trash2, Upload, Plus, X } from 'lucide-react';
 import { useUser } from './UserContext';
 
 const API_BASE_URL =
-  process.env.REACT_APP_API_URL || 'http://localhost:5002/api';
+  process.env.REACT_APP_API_URL || 'https://coloroninventoy.onrender.com/api';
 
 const PackagingInventory = () => {
   const { user } = useUser();

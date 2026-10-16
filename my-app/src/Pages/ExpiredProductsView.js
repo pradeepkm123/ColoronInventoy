@@ -50,9 +50,9 @@ import {
 import axios from 'axios';
 import { getSocket } from '../services/socketService';
 
-const TRACKING_URL = 'http://localhost:5002/api/products/expired-tracking';
-const ACTION_URL = 'http://localhost:5002/api/products/expired-action';
-const FALLBACK_URL = 'http://localhost:5002/api/products';
+const TRACKING_URL = 'https://coloroninventoy.onrender.com/api/products/expired-tracking';
+const ACTION_URL = 'https://coloroninventoy.onrender.com/api/products/expired-action';
+const FALLBACK_URL = 'https://coloroninventoy.onrender.com/api/products';
 
 export default function ExpiredProductsView({ onNavigateHome }) {
   const [products, setProducts] = useState([]);

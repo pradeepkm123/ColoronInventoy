@@ -212,6 +212,31 @@ app.use('/api/accessories', accessoryRoutes);
 app.use('/api/warranty', warrantyRoutes);
 app.use('/api/spare-parts', require('./routes/sparePartRoutes'));
 
+// Root & Health check routes
+app.get('/', (req, res) => {
+  res.status(200).json({
+    status: 'success',
+    message: 'Coloron Inventory API is running',
+    timestamp: new Date().toISOString()
+  });
+});
+
+app.get('/health', (req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString()
+  });
+});
+
+app.get('/api', (req, res) => {
+  res.status(200).json({
+    status: 'success',
+    message: 'Coloron Inventory API root endpoint',
+    version: '1.0.0'
+  });
+});
+
 // Roles API
 app.get('/api/auth/roles', (req, res) => {
   res.json(['Admin', 'Sales', 'Store', 'Warehouse', 'Manager']);

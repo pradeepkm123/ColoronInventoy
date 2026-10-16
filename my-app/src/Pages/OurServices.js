@@ -14,7 +14,7 @@
 // import FormControl from '@mui/material/FormControl';
 // import InputLabel from '@mui/material/InputLabel';
 
-// const API_BASE = "http://localhost:5002/api";
+// const API_BASE = "https://coloroninventoy.onrender.com/api";
 
 // const ServiceManagementSystem = () => {
 //   const { user } = useUser();
@@ -281,7 +281,7 @@
 //                 <td style={styles.tableCell}>
 //                   {s.productImage ? (
 //                     <img
-//                       src={`http://localhost:5002/uploads/${s.productImage}`}
+//                       src={`https://coloroninventoy.onrender.com/uploads/${s.productImage}`}
 //                       alt="Product"
 //                       style={{
 //                         width: '60px',
@@ -610,7 +610,7 @@ import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 
-const API_BASE = "http://localhost:5002/api";
+const API_BASE = "https://coloroninventoy.onrender.com/api";
 
 const ServiceManagementSystem = () => {
   const { user } = useUser();
@@ -915,7 +915,7 @@ const ServiceManagementSystem = () => {
                 <td style={styles.tableCell}>
                   {s.productImage ? (
                     <img
-                      src={`http://localhost:5002/uploads/${s.productImage}`}
+                      src={`https://coloroninventoy.onrender.com/uploads/${s.productImage}`}
                       alt="Product"
                       style={{
                         width: '60px',

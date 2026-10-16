@@ -7,7 +7,7 @@ import Inventory2Icon from '@mui/icons-material/Inventory2';
 import WarehouseIcon from '@mui/icons-material/Warehouse';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 
-const API = 'http://localhost:5002/api';
+const API = 'https://coloroninventoy.onrender.com/api';
 
 const InventoryDashboard = () => {
   const [selectedStore, setSelectedStore] = useState(null);
@@ -328,7 +328,7 @@ const InventoryDashboard = () => {
       setDispatch(normalized);
 
       // Fetch all stock inward data
-      const stockInwardRes = await fetch(`http://localhost:5002/api/store-inward`);
+      const stockInwardRes = await fetch(`https://coloroninventoy.onrender.com/api/store-inward`);
       if (!stockInwardRes.ok) throw new Error(`Failed to fetch stock inward data: ${stockInwardRes.statusText}`);
       const allStockInwardData = await stockInwardRes.json();
 

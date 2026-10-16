@@ -52,8 +52,8 @@ export default function TopCustomersView({ onNavigateHome }) {
     const fetchData = async () => {
       try {
         const [dispatchRes, custRes] = await Promise.all([
-          fetch('http://localhost:5002/api/dispatch'),
-          fetch('http://localhost:5002/api/customers')
+          fetch('https://coloroninventoy.onrender.com/api/dispatch'),
+          fetch('https://coloroninventoy.onrender.com/api/customers')
         ]);
 
         const dispatchData = await dispatchRes.json();

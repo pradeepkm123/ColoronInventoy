@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5002",
+  "proxy": "https://coloroninventoy.onrender.com",
   "engines": {
     "node": "20.x"
   },

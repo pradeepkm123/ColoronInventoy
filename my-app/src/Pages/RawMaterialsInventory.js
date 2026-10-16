@@ -17,7 +17,7 @@
 // //   useEffect(() => {
 // //     const fetchRawMaterials = async () => {
 // //       try {
-// //         const response = await fetch('http://localhost:5002/api/raw-materials');
+// //         const response = await fetch('https://coloroninventoy.onrender.com/api/raw-materials');
 // //         if (!response.ok) throw new Error('Failed to fetch raw materials');
 // //         const data = await response.json();
 // //         setRawMaterials(data);
@@ -32,7 +32,7 @@
 
 // //   const handleAddItem = async (formData) => {
 // //     try {
-// //       const response = await fetch('http://localhost:5002/api/raw-materials', {
+// //       const response = await fetch('https://coloroninventoy.onrender.com/api/raw-materials', {
 // //         method: 'POST',
 // //         headers: {
 // //           'Content-Type': 'application/json',
@@ -50,7 +50,7 @@
 
 // //   const handleEditItem = async (id, updatedItem) => {
 // //     try {
-// //       const response = await fetch(`http://localhost:5002/api/raw-materials/${id}`, {
+// //       const response = await fetch(`https://coloroninventoy.onrender.com/api/raw-materials/${id}`, {
 // //         method: 'PUT',
 // //         headers: {
 // //           'Content-Type': 'application/json',
@@ -68,7 +68,7 @@
 
 // //   const handleDeleteItem = async (id) => {
 // //     try {
-// //       const response = await fetch(`http://localhost:5002/api/raw-materials/${id}`, {
+// //       const response = await fetch(`https://coloroninventoy.onrender.com/api/raw-materials/${id}`, {
 // //         method: 'DELETE',
 // //       });
 // //       if (!response.ok) throw new Error('Failed to delete raw material');
@@ -956,7 +956,7 @@
 //       return;
 //     }
 //     try {
-//       let url = 'http://localhost:5002/api/raw-materials?';
+//       let url = 'https://coloroninventoy.onrender.com/api/raw-materials?';
 //       if (currentUser.userId) {
 //         url += `userId=${currentUser.userId}`;
 //       } else if (currentUser.role) {
@@ -987,7 +987,7 @@
 //         userId: currentUser.userId || currentUser.id,
 //         storeName: currentUser.role || currentUser.storeName,
 //       };
-//       const response = await fetch('http://localhost:5002/api/raw-materials', {
+//       const response = await fetch('https://coloroninventoy.onrender.com/api/raw-materials', {
 //         method: 'POST',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -1013,7 +1013,7 @@
 //         ...updatedItem,
 //         userId: currentUser.userId || currentUser.id,
 //       };
-//       const response = await fetch(`http://localhost:5002/api/raw-materials/${id}`, {
+//       const response = await fetch(`https://coloroninventoy.onrender.com/api/raw-materials/${id}`, {
 //         method: 'PUT',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -1035,7 +1035,7 @@
 //       return;
 //     }
 //     try {
-//       const response = await fetch(`http://localhost:5002/api/raw-materials/${id}`, {
+//       const response = await fetch(`https://coloroninventoy.onrender.com/api/raw-materials/${id}`, {
 //         method: 'DELETE',
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -1912,7 +1912,7 @@ const RawMaterialsInventory = () => {
         return;
       }
       try {
-        let url = 'http://localhost:5002/api/raw-materials?';
+        let url = 'https://coloroninventoy.onrender.com/api/raw-materials?';
         if (currentUser.userId) {
           url += `userId=${currentUser.userId}`;
         } else if (currentUser.role) {
@@ -1945,7 +1945,7 @@ const RawMaterialsInventory = () => {
       };
 
       const response = await fetch(
-        'http://localhost:5002/api/raw-materials',
+        'https://coloroninventoy.onrender.com/api/raw-materials',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -1973,7 +1973,7 @@ const RawMaterialsInventory = () => {
       };
 
       const response = await fetch(
-        `http://localhost:5002/api/raw-materials/${id}`,
+        `https://coloroninventoy.onrender.com/api/raw-materials/${id}`,
         {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
@@ -1996,7 +1996,7 @@ const RawMaterialsInventory = () => {
     }
     try {
       const response = await fetch(
-        `http://localhost:5002/api/raw-materials/${id}`,
+        `https://coloroninventoy.onrender.com/api/raw-materials/${id}`,
         {
           method: 'DELETE',
           headers: { 'Content-Type': 'application/json' },
